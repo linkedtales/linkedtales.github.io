@@ -1,0 +1,186 @@
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .triple img {
+    height: 3rem !important;
+  }
+
+  .chart2 img {
+    height: 6rem;
+  }
+
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+
+  background-color: white;
+  background-image:
+  linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px);
+  background-size: 10px 10px, 10px 10px;
+  background-position:-1px -1px, -1px -1px;
+
+  margin: 0;
+  font-size: 1rem;
+}
+
+.shell {
+
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.title-background {
+  text-align: center;
+}
+
+.title-background .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.title-background .subtitle {
+  margin: 1rem 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex img {
+  max-width: 100%;
+}
+
+.companies div {
+  flex: 1 1 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.companies img {
+  flex: 1 1 auto;
+  width: 10%;
+}
+
+.double, .companies {
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.parallax {
+  background-image: url('assets/background.jpg');
+  background-position: center -100px;
+}
+
+.triple {
+  justify-content: space-around;
+}
+
+.triple > div {
+  flex: 0 0 20%;
+  /* margin: 0 2%;
+  padding: 2% 1%; */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px white;
+}
+.triple .title {
+  height: 10vw;
+}
+.triple img {
+  height: 10%;
+}
+
+.double {
+  align-items: center;
+}
+
+.double img {
+
+}
+
+.double > div {
+  flex: 1 1 auto;
+  display: flex;
+  margin: 5%;
+  justify-content: center;
+}
+
+.double > div > div {
+  flex: 1 0 25%;
+  align-self: center;
+}
+
+.ranking {
+  justify-content: space-around;
+}
+.ranking > div:nth-child(1) {
+  flex: 0 1 20%;
+}
+.ranking > div:nth-child(2),
+.ranking > div:nth-child(3) {
+  flex: 1 0 20%;
+}
+.ranking .double > div:last-child {
+  flex: 1 1 100%;
+}
+
+.tip {
+  justify-content: flex-end;
+}
+.tip img {
+  height: 2rem;
+}
+.tip > div {
+  text-align: right;
+  background-color: rgba(255, 232, 144, 0.8);
+  border: #7b6000 dotted 2px;
+  padding: 0.4rem;
+  flex: 0 1 80%;
+  font-size: 80%;
+  margin-right: 2%;
+  justify-content: flex-end;
+}
+
+.tip > div > div {
+  align-self: center;
+  margin-right: 1rem;
+}
+
+.chart {
+  height:15rem;
+}
+
+.chart2 {
+  align-content: center;
+  padding: 2rem 0;
+  background-position: 0 -50%;
+}
+
+.chart2 > div:nth-child(1) {
+  flex: 0 1 auto;
+}
+
+.chart2 > div:nth-child(2) {
+  flex: 1 1 40%;
+  text-align: center;
+  align-self: center;
+}
+
+.chart2 > div:nth-child(3) {
+  flex: 1 0 50%;
+}

@@ -1,0 +1,197 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-background shell">
+        <div class="title">
+          Software Engineers
+          <br />
+          Experiences
+        </div>
+        <div class="flex companies">
+          <div>
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+          </div>
+          <div>
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+            <img src="assets/img.png" />
+          </div>
+        </div>
+        <div class="subtitle">
+          What do data about previous jobs from engineers from <strong>top-companies</strong> show us?
+        </div>
+      </div>
+
+      <div class="flex triple parallax">
+        <div>
+          <img src="assets/calendar.png" />
+          <div class="title">30<br>months</div>
+          <div class="subtitle">Is the average time on past experience.</div>
+        </div>
+        <div>
+          <img src="assets/building.png" />
+          <div class="title">5<br>companies</div>
+          <div class="subtitle">Is the average number of past experiences</div>
+        </div>
+        <div>
+          <img src="assets/people.png" />
+          <div class="title">18%<br>of all</div>
+          <div class="subtitle">worked at Google or Microsoft</div>
+        </div>
+      </div>
+
+        <div class="title shell">
+        Companies which leaves early
+      </div>
+      <div class="flex ranking shell">
+        <div>
+          <img src="assets/baby.png" />
+        </div>
+        <div class="flex double item">
+          <div>
+            <div><img src="assets/img.png" /></div>
+            <div>37</div>
+            <div><img src="assets/img.png" /></div>
+            <div>37</div>
+          </div>
+          <div>
+            <div><img src="assets/img.png" /></div>
+            <div>37</div>
+            <div><img src="assets/img.png" /></div>
+            <div>37</div>
+          </div>
+          <div>Average months</div>
+        </div>
+        <div class="flex double item">
+          <div>
+            <div><img src="assets/img.png" /></div>
+            <div>37</div>
+            <div><img src="assets/img.png" /></div>
+            <div>37</div>
+          </div>
+          <div>
+            <div><img src="assets/img.png" /></div>
+            <div>37</div>
+            <div><img src="assets/img.png" /></div>
+            <div>37</div>
+          </div>
+          <div>Excluding first 12 months</div>
+        </div>
+      </div>
+      <div class="flex tip shell">
+        <div class="flex">
+          <img src="assets/light.png">
+          <div>
+            Microsoft And Google has a lot of short internship programs.
+          </div>
+        </div>
+      </div>
+      <div class="title shell">
+        Distribution of the time working on past companies
+      </div>
+      <div class="chart shell">
+        <canvas id="chart1"></canvas>
+      </div>
+      <div class="title shell">
+        Distribution of the time working on past companies
+      </div>
+      <div class="chart">
+        <canvas id="chart2"></canvas>
+      </div>
+    </div>
+    <script>
+
+      var ctx = document.getElementById('chart1').getContext('2d');
+      Chart.defaults.scale.gridLines.display = false;
+      
+      const c1 = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ["", "1", "", "2", "", "3", "", "4", "", "5", "5+"],
+            datasets: [{
+                label: '% on top companies',
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                data: [7,16,16,13,10,9,6,6,3,5,12]
+            },{
+                label: '% on non-top companies',
+                backgroundColor: 'rgba(0, 99, 250, 0.5)',
+                data: [22,21,17,9,7,6,4,2,2,2,5]
+            }]
+        },
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            position: 'bottom'
+          }
+        }
+      });
+
+
+      var ctx2 = document.getElementById('chart2').getContext('2d');
+      new Chart(ctx2, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: ["last", "2nd last", "3rd last", "4th last", "5th last"],
+            datasets: [{
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                data: [30, 26, 21, 18, 18]
+
+            }],
+
+        },
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            display: false
+          },
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      min: 0
+                  }
+              }]
+          }
+        }
+      });
+
+
+      /* parallax */
+      document.onscroll = () => {
+       const scrollSize = document.body.scrollTop
+
+       const [e1] = document.getElementsByClassName("parallax")
+
+       e1.style.backgroundPositionY = -1 * scrollSize - 100 + "px"
+
+     }
+    </script>
+  </body>
+</html>
