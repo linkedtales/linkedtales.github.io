@@ -1,0 +1,266 @@
+@media (min-width: 800px) {
+  .wrapper {
+    max-width: 50%;
+  }
+}
+
+.triple img {
+  height: 3rem !important;
+}
+
+.chart2 img {
+  height: 6rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: #2e84b1;
+}
+.ribbon {
+  position: absolute;
+  right: 0;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.ribbon img {
+  height: 6rem;
+  width: 6rem;
+}
+body {
+  font-family: 'Overpass', sans-serif;
+  color: white;
+
+  background-image:
+  linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px);
+
+  background-size: 10px 10px, 10px 10px;
+  background-position:-1px -1px, -1px -1px;
+
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.alternative {
+  background-color: #323d63;
+}
+
+.shell {
+  padding: 0 2%;
+}
+
+.banner {
+  height: fit-content;
+  text-align: center;
+  color: white;
+  padding: 1rem 0;
+}
+
+.banner .title {
+  font-size: 180%;
+  margin: 0;
+  padding: 0;
+  text-shadow: 3px 3px black;
+}
+
+.banner .subtitle {
+  padding: 0.2rem 0;
+  margin: 0;
+  text-shadow: 1px 1px black;
+}
+
+.title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  color: white;
+  font-size: 140%;
+}
+.title-background {
+  text-align: center;
+}
+.title img {
+  float: right;
+  height: 4rem;
+}
+.title .detail {
+  font-weight:  normal;
+  font-size: 80%;
+  text-shadow: none;
+  padding-top: 0.5rem;
+}
+
+.title-background .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 175%;
+}
+
+.title-background .subtitle {
+  margin: 1rem 0;
+}
+
+.subtitle {
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex img {
+  max-width: 100%;
+}
+
+.companies div {
+  flex: 1 1 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.companies img {
+  flex: 1 1 auto;
+  width: 10%;
+}
+
+.double, .companies {
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.parallax {
+  background-image: url('assets/background.jpg');
+  background-position: center -100px;
+}
+
+.triple {
+  justify-content: space-around;
+  flex-direction: column;
+  color: black;
+}
+
+.triple .title {
+  color: black;
+  text-shadow: 2px 2px white;
+}
+
+.triple > div {
+  flex: 0 0 20%;
+  /* margin: 0 2%;
+  padding: 2% 1%; */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-shadow: 2px 2px white;
+  margin: 4% 0;
+  padding: 4% 4%;
+}
+
+.triple .subtitle {
+  padding: 0;
+}
+
+.ranking {
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+}
+.ranking .average {
+  flex: 1 1 100%;
+  margin-bottom: 1rem;
+}
+.ranking img {
+  border-radius: 50%;
+  height: 3rem;
+}
+.ranking > div {
+  flex: 1 0 50%;
+}
+.ranking > div > div > div:nth-child(1) {
+  font-size: 80%;
+}
+.ranking > div > div > img:nth-child(1) {
+  border-radius: 0;
+  height: 0.5rem;
+  margin: 0 0.5rem;
+}
+.ranking > div > div {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ranking > div > div:nth-child(1) {
+  flex: 0 0 100%;
+  font-size: 80%;
+  height: 3rem;
+}
+
+.ranking > div > div > div {
+  margin: 1.5rem 0.5rem;
+  font-weight: bold;
+}
+
+.tip {
+  background-color: rgba(255, 232, 144, 1);
+  border: #ff8d00 dotted 1px;
+  padding: 1.5rem 0.5rem;
+  flex: 1 1 100%;
+  font-size: 80%;
+  justify-content: center;
+  color: black;
+  text-align: justify;
+}
+
+.tip > div > div {
+  align-self: center;
+  margin-right: 1rem;
+}
+
+.small > div > * {
+  margin: 0.5rem 0;
+}
+
+.chart {
+  height:15rem;
+  padding-bottom: 0.5rem;
+}
+
+.chart2 {
+  align-content: center;
+  padding: 2rem 0;
+  background-position: 0 -50%;
+}
+
+.chart2 > div:nth-child(1) {
+  flex: 0 1 auto;
+}
+
+.chart2 > div:nth-child(2) {
+  flex: 1 1 40%;
+  text-align: center;
+  align-self: center;
+}
+
+.chart2 > div:nth-child(3) {
+  flex: 1 0 50%;
+}
+.credits {
+  flex-wrap: wrap;
+}
+.credits img {
+  margin-top:1rem;
+  width: 15rem;
+}
+
+.credits > div {
+  flex: 1 0 100%;
+  font-size: 80%;
+  margin: 0.5rem 0;
+}
