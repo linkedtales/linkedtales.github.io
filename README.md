@@ -5,7 +5,7 @@ LinkedTales is a non-profitable project which uses data from professionals aroun
 ## We need help!
 Ideas, suggestions, and design work are appreciated, please open an issue and we get in touch!
 
-## We care about privacy
+## We care about privacy and third-party terms of use.
 Personal information isn't stored anywhere to guarantee anonymity, privacy and for not violating any terms of use, we use the statistical algorithms on demand from data which is publicly available.
 
 ### License
