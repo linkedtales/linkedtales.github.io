@@ -253,6 +253,7 @@ body {
 }
 .credits {
   flex-wrap: wrap;
+  padding-bottom: 2rem;
 }
 .credits img {
   margin-top:1rem;
@@ -261,6 +262,35 @@ body {
 
 .credits > div {
   flex: 1 0 100%;
-  font-size: 80%;
+
   margin: 0.5rem 0;
+}
+.share {
+  margin: 1rem 0;
+}
+.center {
+  text-align: center;
+}
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+
+ul.share-buttons .sr-only{
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+ul.share-buttons img{
+  width: 32px;
 }
