@@ -1,0 +1,45 @@
+@media (min-width: 800px) {
+  .wrapper {
+    max-width: 50%;
+  }
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  color: black;
+
+  background-image:
+  linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px);
+
+  background-size: 10px 10px, 10px 10px;
+  background-position:-1px -1px, -1px -1px;
+
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.wrapper div {
+  flex: 1 1 auto;
+  margin-bottom: 1rem;
+
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+}
