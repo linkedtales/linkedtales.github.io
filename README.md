@@ -1,4 +1,4 @@
-# linkedtales.github.io
+# ![LinkedTales](https://raw.githubusercontent.com/linkedtales/linkedtales.github.io/master/logo.png)
 -----------
 LinkedTales is a non-profitable project which uses data from professionals around the world for educational purposes only to extract helpful insights for our career development!
 
