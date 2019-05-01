@@ -1,0 +1,27 @@
+.ranking {
+  display: flex;
+
+  &__title {
+
+  }
+
+  &__table {
+    flex-wrap: wrap;
+    flex: 1 0 50%;
+
+    &__title {
+
+    }
+
+    &__item {
+      &__image {
+        border-radius: 50%;
+        height: 3rem;
+      }
+      
+      &__number {
+
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.vertical-carousel {
+  
+
+  &__title {
+
+  }
+
+  &__parallax {
+    background-position: center -100px;
+    justify-content: space-around;
+    flex-direction: column;
+    color: black;
+    display: flex;
+
+    &__item {
+      flex: 0 0 20%;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      text-shadow: 2px 2px white;
+      margin: 4% 0;
+      padding: 4% 4%;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
