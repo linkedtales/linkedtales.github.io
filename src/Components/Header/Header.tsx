@@ -6,7 +6,11 @@ const companies = ['airbnb','apple','aws','facebook',
 'hewlett-packard','booking','oracle','intel','adobe',
 'cisco','ibm','uber','zoom','twitter','yahoo']
 
-const Header = () =>
+interface Props {
+  subtitle: string
+}
+
+const Header : React.FC<{ subtitle: string }>  = ({ subtitle } : Props) =>
   <div className="header">
     <div className="header__title">
       Top companies Software Engineers
@@ -18,11 +22,11 @@ const Header = () =>
       {
         [companies.slice(0, companies.length / 2),
          companies.slice(companies.length / 2)]
-        .map((companiesGroup) =>
-          (<div className="header__companies__group">
+        .map((companiesGroup, i) =>
+          (<div className="header__companies__group" key={i}>
           {
-            companiesGroup.map((company) =>
-              (<img src={`assets/companies/${company}.png`} alt={company} />))
+            companiesGroup.map((company, j) =>
+              (<img src={`assets/companies/${company}.png`} alt={company} key={`${i}-${j}`} />))
           }
           </div>))
       }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Share.less';
+import './Share.scss';
 
 const medias = [
   {
@@ -24,10 +24,10 @@ const Share = () =>
     <div className="share share-text">
       Do you liked this project? Please share it on social media and help it grows, we want to do more!
     </div>
-    <ul className="share-buttons">
+    <ul className="share__buttons">
       {
-        medias.map(({ name, url }) =>
-          <li>
+        medias.map(({ name, url }, i) =>
+          <li key={i}>
             <a href={url} title={`Share on ${name}`} target="_blank" rel="noopener noreferrer">
               <img alt={`Share on ${name}`} src={`assets/social/${name}.svg`} />
             </a>

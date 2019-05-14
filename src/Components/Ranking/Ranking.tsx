@@ -1,27 +1,39 @@
 import React from 'react';
 import './Ranking.scss';
 
-const Ranking = ({ title, image, items } : { title: string, image: string, items: any[] }) =>
+interface Props {
+  title: string;
+  image: string;
+  items: any[];
+}
+
+const Ranking = ({ title, image, items } : Props) =>
   <div className="ranking">
     <div className="ranking__title">
-      <img src={`assets/${image}`} />
-      { title }
+      <div className="ranking__title__text">
+        { title }
+      </div>
+      <div className="ranking__title__image">
+        <img src={`assets/${image}`} alt={image} />
+      </div>      
     </div>
-    {
-      items.map(({ title, subitems} : { title: string, subitems: any[]}) =>
-        <div className="ranking__table">
-          <div className="ranking__table__title">{ title }</div>
-          {
-            subitems.map(({ company, number } : { company: string, number: string}, i: number) =>
-              <div className="ranking__table__item">
-                <img className="ranking__table__item__image" src={`assets/companies/${company}.png`} />
-                <div className="ranking__table__item__number">{ number }</div>
-              </div>
-            )
-          }
-        </div>
-      )
-    }
+    <div className="ranking__content">
+      {
+        items.map(({ title, subitems} : { title: string, subitems: any[]}, i: number) =>
+          <div className="ranking__content__table" key={i}>
+            <div className="ranking__content__table__title">{ title }</div>
+            {
+              subitems.map(({ company, number } : { company: string, number: string}, j: number) =>
+                <div className="ranking__content__table__item" key={`${i}-${j}`}>
+                  <img className="ranking__content__table__item__image" src={`assets/companies/${company}.png`} alt={company} />
+                  <div className="ranking__content__table__item__number">{ number }</div>
+                </div>
+              )
+            }
+          </div>
+        )
+      }
+    </div>
   </div>
   
 export default Ranking;

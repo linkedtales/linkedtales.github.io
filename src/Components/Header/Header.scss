@@ -1,24 +1,32 @@
+@import "src/layout.scss";
+
 .header {
   text-align: center;
   color: white;
-  padding: 1rem 0;
-
+  
   &__title {
     font-size: 180%;
     text-shadow: 3px 3px black;
+    padding: $space;
   }
 
   &__subtitle{
     text-shadow: 1px 1px black;
+    padding: $space;
   }
 
-  &__companies__group {
-    display: flex;
+  &__companies{
+    padding: $space 0;
 
-    img {
-      flex: 1 1 auto;
-      width: 10%;
-      height: 10%;
+    &__group {
+      display: flex;
+  
+      img {
+        flex: 1 1 auto;
+        width: 10%;
+        height: 10%;
+      }
     }
   }
+  
 }

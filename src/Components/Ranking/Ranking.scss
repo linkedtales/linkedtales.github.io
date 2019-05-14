@@ -1,26 +1,48 @@
+@import "src/layout.scss";
+
 .ranking {
-  display: flex;
-
   &__title {
+    display: flex;
+    padding: $space;
 
-  }
-
-  &__table {
-    flex-wrap: wrap;
-    flex: 1 0 50%;
-
-    &__title {
-
+    &__text{
+      flex: 1 1 auto;
     }
 
-    &__item {
-      &__image {
-        border-radius: 50%;
-        height: 3rem;
-      }
+    &__image{
+      flex: 0 0 5rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      padding: $space;
+      text-align: center;
       
-      &__number {
+      img{
+        width: 3rem;
+      }
+    }
+  }
+  &__content {
+    display: flex;
 
+    &__table {
+      flex: 1 0 50%;
+  
+      &__item, &__title {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: $space;
+        
+        &__image {
+          border-radius: 50%;
+          height: 3rem;
+        }
+        
+        &__number {
+  
+        }
       }
     }
   }
