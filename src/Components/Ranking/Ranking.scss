@@ -9,6 +9,8 @@
       flex: 1 1 auto;
     }
 
+    
+
     &__image{
       flex: 0 0 5rem;
       background-color: rgba(255, 255, 255, 0.5);
@@ -16,6 +18,7 @@
       padding: $space;
       text-align: center;
       
+     
       img{
         width: 3rem;
       }
@@ -35,13 +38,15 @@
 
         padding: $space;
         
+        &__arrowimage {
+          height: 0.5rem;
+          margin-right: $space;
+        }
+
         &__image {
           border-radius: 50%;
           height: 3rem;
-        }
-        
-        &__number {
-  
+          margin: 0 $space;
         }
       }
     }

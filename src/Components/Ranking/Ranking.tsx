@@ -24,10 +24,19 @@ const Ranking = ({ title, image, items, isAlternative = false } : Props) =>
           <div className="ranking__content__table" key={i}>
             <div className="ranking__content__table__title">{ title }</div>
             {
-              subitems.map(({ company, number } : { company: string, number: string}, j: number) =>
+              subitems.map(({ company, number, arrow } : { company: string, number: string, arrow: string}, j: number) =>
                 <div className="ranking__content__table__item" key={`${i}-${j}`}>
+                  {
+                    (arrow === "-")
+                      ? <span className="ranking__content__table__item__arrowimage">-</span>
+                      : (arrow)
+                        ? <img src={`assets/${arrow}.png`} className="ranking__content__table__item__arrowimage"/> 
+                        : <span>#{j}</span>
+                  }
                   <img className="ranking__content__table__item__image" src={`assets/companies/${company}.png`} alt={company} />
-                  <div className="ranking__content__table__item__number">{ number }</div>
+                  <div className="ranking__content__table__item__number">
+                    { number }
+                  </div>
                 </div>
               )
             }

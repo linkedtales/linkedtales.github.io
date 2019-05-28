@@ -3,6 +3,7 @@ import Header from '../../Components/Header/Header';
 import Share from '../../Components/Share/Share';
 import VerticalCarousel from '../../Components/VerticalCarousel/VerticalCarousel';
 import Ranking from '../../Components/Ranking/Ranking';
+import RankingMini from '../../Components/RankingMini/RankingMini';
 import Chart from '../../Components/Chart/Chart';
 import Footer from '../../Components/Footer/Footer';
 
@@ -43,11 +44,11 @@ const lowStayRanking = {
     {
       title: "average months excluding the first 2 years",
       subitems: [
-        { company: "intel", number: "35" },
-        { company: "linkedin", number: "35" },
-        { company: "facebook", number: "37" },
-        { company: "booking", number: "38" },
-        { company: "airbnb", number: "40" },
+        { company: "intel", number: "35", arrow: "up" },
+        { company: "linkedin", number: "35", arrow: "down" },
+        { company: "facebook", number: "37", arrow: "up" },
+        { company: "booking", number: "38", arrow: "down" },
+        { company: "airbnb", number: "40", arrow: "up" },
       ]
     }
   ]
@@ -69,11 +70,11 @@ const highStayRanking = {
     {
       title: "average months excluding more than 60 months",
       subitems: [
-        { company: "twitter", number: "31" },
-        { company: "oracle", number: "29" },
-        { company: "uber", number: "27" },
-        { company: "adobe", number: "25" },
-        { company: "netflix", number: "24" },
+        { company: "twitter", number: "31", arrow: "-" },
+        { company: "oracle", number: "29", arrow: "up" },
+        { company: "uber", number: "27", arrow: "up" },
+        { company: "adobe", number: "25", arrow: "-" },
+        { company: "netflix", number: "24", arrow: "down" },
       ]
     }
   ]
@@ -133,13 +134,35 @@ const averageMonthsChart = {
   }
 }
 
+const lowStayRankingMini = {
+  title: '% of top-company engineers departures before 1 year',
+  items: [
+    { company: 'hewlett-packard', number: '54' },
+    { company: 'microsoft', number: '48' },
+    { company: 'zoom', number: '46' },
+    { company: 'intel', number: '44' }
+  ]
+}
+
+const highStayRankingMini = {
+  title: '% of top-company engineers which stayed more than 60 months',
+  items: [
+    { company: 'netflix', number: '26' },
+    { company: 'twitter', number: '23' },
+    { company: 'apple', number: '21' },
+    { company: 'google', number: '19' }
+  ]
+}
+
 const App: React.FC = () => {
   return (
     <div className="wrapper">
       <Header subtitle={subtitle} />
       <VerticalCarousel items={items} background={"background.jpg"} />
       <Ranking {...lowStayRanking} image={"baby.png"}  />
+      <RankingMini {...lowStayRankingMini} />
       <Ranking {...highStayRanking} image={"old.png"} isAlternative={true} />
+      <RankingMini {...highStayRankingMini} />
       <Chart {...averageYearsChart} />
       <Chart {...averageMonthsChart} isAlternative={true} />
       <Share />
