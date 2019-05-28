@@ -5,10 +5,11 @@ interface Props {
   title: string;
   image: string;
   items: any[];
+  isAlternative?: boolean;
 }
 
-const Ranking = ({ title, image, items } : Props) =>
-  <div className="ranking">
+const Ranking = ({ title, image, items, isAlternative = false } : Props) =>
+  <div className={`ranking${isAlternative && ' alternative'}`}>
     <div className="ranking__title">
       <div className="ranking__title__text">
         { title }

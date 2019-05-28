@@ -7,11 +7,9 @@ interface Dataset {
 }
 
 interface Props {
-  type: string;
-  labels: string[];
-  datasets: Dataset[],
-  displayLegend: boolean,
-  legendPosition: string
+  title: string;
+  chartOptions: object;
+  isAlternative?: boolean;
 };
 
 declare global {
@@ -28,30 +26,22 @@ class Chart extends React.Component<Props> {
   chartReference = React.createRef<HTMLCanvasElement>()
 
   componentDidMount() {
-    const chartOptions = {
-      type: this.props.type,
-      data: {
-        labels: this.props.labels,
-        datasets: this.props.datasets
-      },
-      options: {
-        maintainAspectRatio: false,
-        legend: {
-          display: this.props.displayLegend || true,
-          position: this.props.legendPosition || 'undefined'
-        }
-      }
-    }
+    const chartOptions = this.props.chartOptions
 
     //ar ctx = document.getElementById('chart1').getContext('2d');
     const chartDiv = this.chartReference.current;
+    
+    window.Chart.defaults.global.defaultFontColor = 'white';
+    window.Chart.defaults.scale.gridLines.display = false;
+    window.Chart.defaults.global.defaultFontColor = 'black';
+
     new window.Chart(chartDiv, chartOptions);
 
   }
 
   render() {
     return (
-      <div className="chart" >
+      <div className={`chart${this.props.isAlternative && ' alternative'}`} >
         <canvas id={this.state.chartId.toString()} ref={this.chartReference}></canvas>
       </div>
     );
