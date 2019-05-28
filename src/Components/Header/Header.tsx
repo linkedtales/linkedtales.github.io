@@ -12,8 +12,8 @@ interface Props {
 
 const Header : React.FC<{ subtitle: string }>  = ({ subtitle } : Props) =>
   <div className="header">
-    <div className="header__title">
-      Top companies Software Engineers
+    <div className="header__title title">
+      Top Software Engineer
     </div>
     <div className="header__subtitle">
       professional experiences
@@ -30,6 +30,9 @@ const Header : React.FC<{ subtitle: string }>  = ({ subtitle } : Props) =>
           }
           </div>))
       }
+    </div>
+    <div className="header__headline">
+      What their previous jobs on the best companies show us?
     </div>
   </div>
   

@@ -1,1 +1,39 @@
+$color-1: #0D204B;
+$color-2: #0077B5;
+$color-3: #BC8DA7;
+$color-4: #EA8C31;
+$color-5: #77214C;
+
 $space: 0.7rem;
+
+body {
+  margin: 0 auto;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  background-image:
+    linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px),
+    linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px);
+  background-size: 10px 10px, 10px 10px;
+  background-position:-1px -1px, -1px -1px;      
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: $color-2;
+  display: flex;
+  flex-direction: column;
+  
+
+  @media (min-width: 800px) {
+    max-width: 50%;
+  }
+}
+
+.title {
+  font-size: 200%;
+  text-shadow: 3px 3px $color-1;
+  font-weight: bold;
+}

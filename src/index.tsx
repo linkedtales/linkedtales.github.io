@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Index from './Pages/Index/Index'
 import Experiences from './Pages/Experiences/Experiences'
 
 import * as serviceWorker from './serviceWorker';
 
-const index = <div className="wrapper">
-  <Router>
-    <Route path="/" component={Index} />
+const index = <Router>
     <Route path="/software-engineers-professional-experiences" component={Experiences} />
+    <Route path="/" component={Index} />
   </Router>
-</div>
 
 ReactDOM.render(index, document.getElementById('root'));
 

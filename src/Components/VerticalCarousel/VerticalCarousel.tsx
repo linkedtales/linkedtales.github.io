@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './VerticalCarousel.scss';
 
 interface Props {
@@ -6,12 +6,24 @@ interface Props {
   background: string;
 }
 
-const VerticalCarousel = ({ items, background }: Props) =>
-  <div className="vertical-carousel">
-    <div className="vertical-carousel__title">
-      a title
-    </div>
-    <div className="vertical-carousel__parallax" style={{backgroundImage: `url(assets/${background})`}}>
+const VerticalCarousel: React.FC<Props> = ({ items, background } : Props) => {
+  const parallaxRef = React.useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const e1 = parallaxRef.current;
+    const TOP_OFFSET = 600
+    const setBackgroundValue = (value: number) => {
+      if(e1)
+        e1.style.backgroundPositionY = value - TOP_OFFSET + "px"
+    }
+    setBackgroundValue(0)
+    document.onscroll = () => {
+      const scrollSize = window.scrollY;
+      setBackgroundValue(scrollSize)
+    }    
+  })
+
+  return <div className="vertical-carousel">
+    <div className="vertical-carousel__parallax" ref={parallaxRef} style={{backgroundImage: `url(assets/${background})`}}>
       {
         items.map(({ image, title, subtitle }, i) => (
           <div className="vertical-carousel__parallax__item" key={i}>
@@ -23,5 +35,6 @@ const VerticalCarousel = ({ items, background }: Props) =>
       }
     </div>
   </div>
+}
 
 export default VerticalCarousel;

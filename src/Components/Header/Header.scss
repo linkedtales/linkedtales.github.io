@@ -5,19 +5,17 @@
   color: white;
   
   &__title {
-    font-size: 180%;
-    text-shadow: 3px 3px black;
-    padding: $space;
+    padding-top: $space * 2;
   }
 
   &__subtitle{
-    text-shadow: 1px 1px black;
-    padding: $space;
+    font-size: 140%;
+    text-shadow: 2px 2px $color-1;
+    padding: $space * 2;
+    padding-top: $space / 2;
   }
 
   &__companies{
-    padding: $space 0;
-
     &__group {
       display: flex;
   
@@ -27,6 +25,15 @@
         height: 10%;
       }
     }
+  }
+
+  &__headline {
+    background-color: $color-4;
+    
+    padding: $space * 2;
+    font-size: 150%;
+    color: white;
+    text-shadow: 2px 2px $color-5;
   }
   
 }

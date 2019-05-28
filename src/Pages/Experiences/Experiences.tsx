@@ -8,8 +8,9 @@ import Chart from '../../Components/Chart/Chart';
 import './Experiences.scss';
 
 const items = [
-  { image: "calendar", title: "ae", subtitle: "opa" },
-  { image: "baby", title: "ole", subtitle: "opa" }
+  { image: "calendar", title: "30 months", subtitle: "Is the average time on past experience, The average of all past experiences is 25 months." },
+  { image: "baby", title: "4.6 companies", subtitle: "Is the average number of past experiences, only 14% has less than 3 experiences and 50% has more than 5 experiences." },
+  { image: "people", title: "18% worked at Google or Microsoft", subtitle: "These are the most common background among top-company professionals." }
 ]
 
 const rankingItems = [
@@ -45,12 +46,12 @@ const chart = {
 
 const App: React.FC = () => {
   return (
-    <div className="app">
+    <div className="wrapper">
       <Header subtitle="ople" />
-      <Share />
       <VerticalCarousel items={items} background={"background.jpg"} />
       <Ranking title={"olear"} image={"baby.png"} items={rankingItems} />
       <Chart {...chart} />
+      <Share />
     </div>
   );
 }
