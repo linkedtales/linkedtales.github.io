@@ -1,18 +1,6 @@
 @import "src/layout.scss";
 
-.share {
-  text-align: center;
-
-  &__buttons {
-    list-style: none;
-
-    li {
-      display: inline;
-      padding: $space;
-    }
-
-    img {
-      width: 32px;
-    }
-  }
+.chart {
+  height: 15rem;
+  padding: $space;
 }

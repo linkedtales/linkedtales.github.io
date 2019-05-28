@@ -1,0 +1,10 @@
+@import "src/layout.scss";
+
+.footer {
+  text-align: center;
+  padding: $space;
+
+  img {
+    max-width: 50%;
+  }
+}

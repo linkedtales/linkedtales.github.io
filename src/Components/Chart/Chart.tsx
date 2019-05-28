@@ -33,15 +33,13 @@ class Chart extends React.Component<Props> {
     
     window.Chart.defaults.global.defaultFontColor = 'white';
     window.Chart.defaults.scale.gridLines.display = false;
-    window.Chart.defaults.global.defaultFontColor = 'black';
 
     new window.Chart(chartDiv, chartOptions);
-
   }
 
   render() {
     return (
-      <div className={`chart${this.props.isAlternative && ' alternative'}`} >
+      <div className={`chart ${this.props.isAlternative && ' alternative'}`} >
         <canvas id={this.state.chartId.toString()} ref={this.chartReference}></canvas>
       </div>
     );

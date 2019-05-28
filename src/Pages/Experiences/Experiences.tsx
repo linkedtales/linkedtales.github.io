@@ -4,6 +4,7 @@ import Share from '../../Components/Share/Share';
 import VerticalCarousel from '../../Components/VerticalCarousel/VerticalCarousel';
 import Ranking from '../../Components/Ranking/Ranking';
 import Chart from '../../Components/Chart/Chart';
+import Footer from '../../Components/Footer/Footer';
 
 import './Experiences.scss';
 
@@ -142,6 +143,7 @@ const App: React.FC = () => {
       <Chart {...averageYearsChart} />
       <Chart {...averageMonthsChart} isAlternative={true} />
       <Share />
+      <Footer isAlternative={true} />
     </div>
   );
 }
