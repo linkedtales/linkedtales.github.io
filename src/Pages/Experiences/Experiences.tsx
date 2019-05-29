@@ -1,11 +1,12 @@
 import React from 'react';
-import Header from '../../Components/Header/Header';
-import Share from '../../Components/Share/Share';
-import VerticalCarousel from '../../Components/VerticalCarousel/VerticalCarousel';
-import Ranking from '../../Components/Ranking/Ranking';
-import RankingMini from '../../Components/RankingMini/RankingMini';
 import Chart from '../../Components/Chart/Chart';
 import Footer from '../../Components/Footer/Footer';
+import Header from '../../Components/Header/Header';
+import Share from '../../Components/Share/Share';
+import Ranking from '../../Components/Ranking/Ranking';
+import RankingMini from '../../Components/RankingMini/RankingMini';
+import Tip from '../../Components/Tip/Tip';
+import VerticalCarousel from '../../Components/VerticalCarousel/VerticalCarousel';
 
 import './Experiences.scss';
 
@@ -54,6 +55,11 @@ const lowStayRanking = {
     }
   ]
 }
+
+const lowStayRankingTip = 'Excluding the first 2 years from the average show us companies where top-company engineers don\'t leave too early but don\'t stay for much longer as well.'
+const highStayRankingTip = 'The total average is inflated by engineers which stayed almost a decade on the company, removing them we have a better average.'
+const averageYearsChartTip = 'Top-company engineers stay 50% more in the first 2 years at top-companies, in addition, they also stay longer in the long term compared to non-top companies.'
+const averageMonthsChartTip = 'Although engineers are known for not staying much longer in a company, they stay more and more at each new job.'
 
 const highStayRanking = {
   title: 'Companies where engineers stays more',
@@ -161,11 +167,15 @@ const App: React.FC = () => {
       <Header title={title} subtitle={subtitle} />
       <VerticalCarousel items={items} background={"background.jpg"} />
       <Ranking {...lowStayRanking} image={"baby.png"}  />
+      <Tip text={lowStayRankingTip} />
       <RankingMini {...lowStayRankingMini} />
       <Ranking {...highStayRanking} image={"old.png"} isAlternative={true} />
+      <Tip text={highStayRankingTip} isAlternative={true}/>
       <RankingMini {...highStayRankingMini} isAlternative={true} />
       <Chart {...averageYearsChart} />
+      <Tip text={averageYearsChartTip}/>
       <Chart {...averageMonthsChart} isAlternative={true} />
+      <Tip text={averageMonthsChartTip} isAlternative={true}/>
       <Footer />
       <Share isAlternative={true}  />
       
