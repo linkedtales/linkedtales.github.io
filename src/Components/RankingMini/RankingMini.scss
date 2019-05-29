@@ -1,6 +1,12 @@
 @import "src/layout.scss";
 
 .rankingmini {
+  &__title {
+    padding: $space;
+    margin: $space 0;
+    text-align: center;
+  }
+
   &__ranking {
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +15,8 @@
       flex: 1 0 50%;
       text-align: center;
       padding-bottom: $space;
+      font-weight: bold;
+      font-size: 120%;
       
       img {
         margin-bottom: $space;

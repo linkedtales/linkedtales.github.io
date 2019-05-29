@@ -7,16 +7,17 @@ const companies = ['airbnb','apple','aws','facebook',
 'cisco','ibm','uber','zoom','twitter','yahoo']
 
 interface Props {
-  subtitle: string
+  title: string;
+  subtitle: string;
 }
 
-const Header : React.FC<{ subtitle: string }>  = ({ subtitle } : Props) =>
+const Header : React.FC<Props>  = ({ title, subtitle } : Props) =>
   <div className="header">
     <div className="header__title title">
       Top Software Engineer
     </div>
     <div className="header__subtitle">
-      professional experiences
+      {title}
     </div>
     <div className="header__companies">
       {
@@ -31,9 +32,7 @@ const Header : React.FC<{ subtitle: string }>  = ({ subtitle } : Props) =>
           </div>))
       }
     </div>
-    <div className="header__headline">
-      What their previous jobs on the best companies show us?
-    </div>
+    <div className="header__headline" dangerouslySetInnerHTML={{__html: subtitle }} />
   </div>
   
 export default Header;

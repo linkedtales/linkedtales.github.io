@@ -10,7 +10,7 @@ interface Props {
 
 const RankingMini = ({ title, items, isAlternative = false } : Props) =>
   <div className={`rankingmini${isAlternative && ' alternative'}`}>
-    <div className="rankingmini__title">
+    <div className="rankingmini__title title">
       <div className="detail">% of top-company engineers which stayed more than 60 months</div>
     </div>
     <div className="rankingmini__ranking">     

@@ -20,7 +20,7 @@ const medias = [
 ]
 
 const Footer = ({ isAlternative = false }) =>
-  <div className={`footer ${isAlternative && 'alternative'}`}> ${isAlternative && 'alternative'}
+  <div className={`footer ${isAlternative && 'alternative'}`}>
     <div>
       <img src="assets/logo.png" />
       <br />

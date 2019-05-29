@@ -9,17 +9,18 @@ import Footer from '../../Components/Footer/Footer';
 
 import './Experiences.scss';
 
-const subtitle = 'What previous jobs from best sotware engineering companies show us?'
+const title = 'professional experiences'
+const subtitle = 'What do their jobs on the <strong>best companies</strong> show us?'
 const items = [
   {
     image: "calendar",
     title: "30 months",
-    subtitle: "Is the average time on past experience, The average of all past experiences is 25 months."
+    subtitle: "Is the average time on past experience,<br/>The average of all past experiences are <br/><strong>25 months</strong>."
   },
   {
-    image: "baby",
+    image: "building",
     title: "4.6 companies",
-    subtitle: "Is the average number of past experiences, only 14% has less than 3 experiences and 50% has more than 5 experiences."
+    subtitle: "Is the average number of past experiences,<br/>only <strong>14%</strong> has less than <strong>3 experiences</strong> and<br/><strong>50%</strong> has more than <strong>5 experiences</strong>."
   },
   { 
     image: "people",
@@ -42,7 +43,7 @@ const lowStayRanking = {
       ]
     },
     {
-      title: "average months excluding the first 2 years",
+      title: "average excluding the first 2 years",
       subitems: [
         { company: "intel", number: "35", arrow: "up" },
         { company: "linkedin", number: "35", arrow: "down" },
@@ -68,7 +69,7 @@ const highStayRanking = {
       ]
     },
     {
-      title: "average months excluding more than 60 months",
+      title: "average excluding more than 60 months",
       subitems: [
         { company: "twitter", number: "31", arrow: "-" },
         { company: "oracle", number: "29", arrow: "up" },
@@ -157,16 +158,17 @@ const highStayRankingMini = {
 const App: React.FC = () => {
   return (
     <div className="wrapper">
-      <Header subtitle={subtitle} />
+      <Header title={title} subtitle={subtitle} />
       <VerticalCarousel items={items} background={"background.jpg"} />
       <Ranking {...lowStayRanking} image={"baby.png"}  />
       <RankingMini {...lowStayRankingMini} />
       <Ranking {...highStayRanking} image={"old.png"} isAlternative={true} />
-      <RankingMini {...highStayRankingMini} />
+      <RankingMini {...highStayRankingMini} isAlternative={true} />
       <Chart {...averageYearsChart} />
       <Chart {...averageMonthsChart} isAlternative={true} />
-      <Share />
-      <Footer isAlternative={true} />
+      <Footer />
+      <Share isAlternative={true}  />
+      
     </div>
   );
 }

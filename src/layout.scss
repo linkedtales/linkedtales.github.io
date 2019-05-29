@@ -17,7 +17,8 @@ body {
     linear-gradient(rgb(230,230,230) 1px, transparent 1px),
     linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px);
   background-size: 10px 10px, 10px 10px;
-  background-position:-1px -1px, -1px -1px;      
+  background-position:-1px -1px, -1px -1px;    
+  line-height: 1.5;  
 }
 
 .alternative {
@@ -37,7 +38,7 @@ body {
 }
 
 .title {
-  font-size: 200%;
+  font-size: 150%;
   text-shadow: 3px 3px $color-1;
   font-weight: bold;
 }
