@@ -12,12 +12,13 @@
 
   &__text {
     flex: 1 0 80%;
-    background-color: rgba(255, 232, 144, 1);
-    border: #ff8d00 dotted 1px;
+    background-color: $color-3;
+    border: #656f3e dotted 2px;
     padding: $space;
     flex: 1 1 100%;
     justify-content: center;
     color: black;
     text-align: center;
+    text-shadow: none;
   }
 }

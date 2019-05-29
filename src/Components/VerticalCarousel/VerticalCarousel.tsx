@@ -27,7 +27,7 @@ const VerticalCarousel: React.FC<Props> = ({ items, background } : Props) => {
       {
         items.map(({ image, title, subtitle }, i) => (
           <div className="vertical-carousel__parallax__item" key={i}>
-            <img src={`assets/${image}.png`} alt={image} />
+            <img src={`assets/${image}.png`} alt={image}/>
             <div className="title">{ title }</div>
             <div className="subtitle" dangerouslySetInnerHTML={{__html: subtitle }} />
           </div>

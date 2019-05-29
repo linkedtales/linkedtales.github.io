@@ -1,10 +1,11 @@
-$color-1: #0D204B;
+$color-1: #002336;
 $color-2: #0077B5;
-$color-3: #BC8DA7;
-$color-4: #EA8C31;
-$color-5: #77214C;
+$color-3: #F7EAB2;
+$color-4: #68a2c5;
+$color-5: #345162;
 
 $space: 0.7rem;
+
 
 body {
   margin: 0 auto;
@@ -19,10 +20,32 @@ body {
   background-size: 10px 10px, 10px 10px;
   background-position:-1px -1px, -1px -1px;    
   line-height: 1.5;  
+
+  text-shadow: $color-1 1px 1px;
+}
+
+.border {
+  box-shadow: $color-1 1px 1px;
+
+}
+
+.title {
+  font-size: 150%;
+  text-shadow: 2px 3px $color-1;
+  font-weight: bold;
 }
 
 .alternative {
   background-color: $color-4;
+  text-shadow: $color-5  1px 1px;
+
+  .border {
+    box-shadow: $color-5 1px 1px;
+  }
+
+  .title {
+    text-shadow: 3px 3px $color-5;
+  }
 }
 
 .wrapper {
@@ -37,8 +60,3 @@ body {
   }
 }
 
-.title {
-  font-size: 150%;
-  text-shadow: 3px 3px $color-1;
-  font-weight: bold;
-}

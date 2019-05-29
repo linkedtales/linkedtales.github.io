@@ -3,8 +3,18 @@
 .footer {
   text-align: center;
   padding: $space;
+  margin-bottom: $space * 2;
 
   img {
     max-width: 50%;
+  }
+
+  .widget, a {
+    text-shadow: none;
+  }
+
+  a {
+    color: white;
+    cursor: pointer;
   }
 }

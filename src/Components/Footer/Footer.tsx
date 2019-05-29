@@ -27,9 +27,9 @@ const Footer = ({ isAlternative = false }) =>
       <a className="github-button" href="https://github.com/linkedtales/linkedtales.github.io" data-show-count="true" aria-label="Star linkedtales/linkedtales.github.io on GitHub">Star</a>
     </div>
     <div>
-      Open-source, by engineers to engineers, please meet us at GitHub:
+      made to engineers by engineers
       <br/>
-      <a href="https://github.com/linkedtales/linkedtales.github.io" target="_blank">http://linkedtales.github.io</a>
+      <a href="http://linkedtales.github.io" target="_blank">see more of our infographics <br/> linkedtales.github.io</a>
       <br />
     </div>
   </div>

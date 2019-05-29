@@ -14,8 +14,8 @@ const Ranking = ({ title, image, items, isAlternative = false } : Props) =>
       <div className="ranking__title__text">
         { title }
       </div>
-      <div className="ranking__title__image">
-        <img src={`assets/${image}`} alt={image} />
+      <div className="ranking__title__image" >
+        <img src={`assets/${image}`} alt={image}  />
       </div>      
     </div>
     <div className="ranking__content">
@@ -33,7 +33,7 @@ const Ranking = ({ title, image, items, isAlternative = false } : Props) =>
                         ? <img src={`assets/${arrow}.png`} className="ranking__content__table__item__arrowimage"/> 
                         : <span className="ranking__content__table__item__numeral">#{j}</span>
                   }
-                  <img className="ranking__content__table__item__image" src={`assets/companies/${company}.png`} alt={company} />
+                  <img className="ranking__content__table__item__image border" src={`assets/companies/${company}.png`} alt={company} />
                   <div className="ranking__content__table__item__number">
                     { number }
                   </div>

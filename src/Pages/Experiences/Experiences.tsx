@@ -162,6 +162,10 @@ const highStayRankingMini = {
 }
 
 const App: React.FC = () => {
+  React.useEffect(() => {
+    document.title = 'LinkedTales - Top Software Engineer Professional Experiences'
+  })
+
   return (
     <div className="wrapper">
       <Header title={title} subtitle={subtitle} />
@@ -176,8 +180,8 @@ const App: React.FC = () => {
       <Tip text={averageYearsChartTip}/>
       <Chart {...averageMonthsChart} isAlternative={true} />
       <Tip text={averageMonthsChartTip} isAlternative={true}/>
-      <Footer />
-      <Share isAlternative={true}  />
+      <Share  />
+      <Footer isAlternative={true}  />
       
     </div>
   );

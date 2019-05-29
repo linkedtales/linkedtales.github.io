@@ -17,7 +17,7 @@ const RankingMini = ({ title, items, isAlternative = false } : Props) =>
       {
         items.map(({ company, number } : {company: string, number: string}) =>
           <div className="rankingmini__ranking__item">
-            <img src={`assets/companies/${company}.png`} />
+            <img src={`assets/companies/${company}.png`} className="border"/>
             <div>{number} %</div>
           </div>
         ) 

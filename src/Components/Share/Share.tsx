@@ -22,7 +22,7 @@ const medias = [
 const Share = ({ isAlternative = false }) =>
   <div className={`share ${isAlternative && 'alternative'}`}>
     <div className="share share-text">
-      please share this project and help it grows!
+      help us do more, please share it!
     </div>
     <ul className="share__buttons">
       {
