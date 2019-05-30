@@ -3,14 +3,16 @@
 .footer {
   text-align: center;
   padding: $space;
-  margin-bottom: $space * 2;
+  padding-bottom: $space * 2;
 
   img {
     max-width: 50%;
   }
 
   .widget, a {
-    text-shadow: none;
+    span {
+      text-shadow: none !important;
+    }
   }
 
   a {

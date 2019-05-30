@@ -8,8 +8,9 @@ import Experiences from './Pages/Experiences/Experiences'
 import * as serviceWorker from './serviceWorker';
 
 const index = <Router>
-    <Route path="/software-engineers-professional-experiences" component={Experiences} />
-    <Route path="/" component={Index} />
+    <Route path="/" exact component={Index} />
+    <Route path="/software-engineer-professional-experiences" component={Experiences} />
+    
   </Router>
 
 ReactDOM.render(index, document.getElementById('root'));

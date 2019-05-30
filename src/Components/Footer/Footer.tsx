@@ -19,7 +19,7 @@ const medias = [
   }
 ]
 
-const Footer = ({ isAlternative = false }) =>
+const Footer = ({ isAlternative = false, hasToSeeMore = true }) =>
   <div className={`footer ${isAlternative && 'alternative'}`}>
     <div>
       <img src="assets/logo.png" />
@@ -29,7 +29,10 @@ const Footer = ({ isAlternative = false }) =>
     <div>
       made to engineers by engineers
       <br/>
-      <a href="http://linkedtales.github.io" target="_blank">see more of our infographics <br/> linkedtales.github.io</a>
+      {
+        hasToSeeMore &&
+        <a href="http://linkedtales.github.io" target="_blank">see more of our infographics <br/> linkedtales.github.io</a>
+      }
       <br />
     </div>
   </div>
