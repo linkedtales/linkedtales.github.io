@@ -2,20 +2,23 @@
 
 .share {
   text-align: center;
-  padding: $space / 2;
-  padding-bottom: 0;
-
-
+  
   &__buttons {
+    margin: $space / 2;
+    padding: 0;
     list-style: none;
 
     li {
       display: inline;
-      padding: $space;
+      padding: $space / 2;
     }
 
     img {
       width: 32px;
     }
   }
+}
+
+.share-text {
+  margin: $space / 2;
 }

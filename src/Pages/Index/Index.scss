@@ -4,6 +4,7 @@
   &__header {
     &__logo {
       padding: $space;
+      padding-bottom: 0;
       text-align: center;
       img {
         width: 50%;
@@ -14,12 +15,12 @@
   &__body{
     padding: $space;
     padding-top: 0;
-    display:flex;
+    display: flex;
     align-items: center;
 
     &__image{
      flex:1 1 auto; 
-     height: 4rem;
+     height: 3rem;
      padding: $space;
 
      background-color: rgba(255, 255, 255, 0.2);
@@ -34,7 +35,7 @@
       flex:2 1 auto; 
       padding: $space;
 
-      font-size: 110%;
+      font-size: 80%;
       text-align: center;
     }
   }

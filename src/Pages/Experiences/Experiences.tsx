@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 import Chart from '../../Components/Chart/Chart';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
@@ -161,30 +163,40 @@ const highStayRankingMini = {
   ]
 }
 
-const App: React.FC = () => {
-  React.useEffect(() => {
-    document.title = 'LinkedTales - Top Software Engineer Professional Experiences'
-  })
+const App: React.FC = () =>
+  <div className="wrapper">
+    <Helmet>
+      <title>LinkedTales - Top Software Engineer Professional Experiences</title>
+      <meta name="title" content="LinkedTales" />
+      <meta name="description" content="Discover insights about your career based on statistics from thousands of top company professionals worldwide, it's totally free!" />
+      <meta name="keywords" content="statistics, company, career, profession, infographic" />
+    
+      <meta property="og:url" content="https://linkedtales.github.io/software-engineering-experiences" />
+      <meta property="og:title" content="Top Companies Software Engineers Experiences" />
+      <meta property="og:description" content="Discover free insights about your career based on statistics from thousands of top company professionals worldwide." />
+      <meta property="og:image" content="https://linkedtales.github.io/assets/experiences.png" />
 
-  return (
-    <div className="wrapper">
-      <Header title={title} subtitle={subtitle} />
-      <VerticalCarousel items={items} background={"background.jpg"} />
-      <Ranking {...lowStayRanking} image={"baby.png"}  />
-      <Tip text={lowStayRankingTip} />
-      <RankingMini {...lowStayRankingMini} />
-      <Ranking {...highStayRanking} image={"old.png"} isAlternative={true} />
-      <Tip text={highStayRankingTip} isAlternative={true}/>
-      <RankingMini {...highStayRankingMini} isAlternative={true} />
-      <Chart {...averageYearsChart} />
-      <Tip text={averageYearsChartTip}/>
-      <Chart {...averageMonthsChart} isAlternative={true} />
-      <Tip text={averageMonthsChartTip} isAlternative={true}/>
-      <Share  />
-      <Footer isAlternative={true}  />
-      
-    </div>
-  );
-}
+      <meta property="twitter:url" content="https://linkedtales.github.io/software-engineering-experiences" />
+      <meta property="twitter:title" content="Top Companies Software Engineers Experiences" />
+      <meta property="twitter:description" content="Discover free insights about your career based on statistics from thousands of top company professionals worldwide." />
+      <meta property="twitter:image" content="https://linkedtales.github.io/assets/experiences.png" />
+    </Helmet>
+    <Header title={title} subtitle={subtitle} />
+    <VerticalCarousel items={items} background={"background.jpg"} />
+    <Ranking {...lowStayRanking} image={"baby.png"}  />
+    <Tip text={lowStayRankingTip} />
+    <RankingMini {...lowStayRankingMini} />
+    <Ranking {...highStayRanking} image={"old.png"} isAlternative={true} />
+    <Tip text={highStayRankingTip} isAlternative={true}/>
+    <RankingMini {...highStayRankingMini} isAlternative={true} />
+    <Chart {...averageYearsChart} />
+    <Tip text={averageYearsChartTip}/>
+    <Chart {...averageMonthsChart} isAlternative={true} />
+    <Tip text={averageMonthsChartTip} isAlternative={true}/>
+    <Share  />
+    <Footer isAlternative={true}  />
+    
+  </div>
+
 
 export default App;
