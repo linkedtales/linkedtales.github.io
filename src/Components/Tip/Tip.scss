@@ -1,0 +1,28 @@
+@import "src/layout.scss";
+
+.tip {
+  padding: $space;
+  display: flex;
+  align-items: center;
+
+  &__image {
+    flex: 1 0 20%;
+
+    img {
+      width: 100%;
+    }
+    
+  }
+
+  &__text {
+    flex: 1 0 80%;
+    background-color: $color-3;
+    border: #656f3e dotted 2px;
+    padding: $space;
+    flex: 1 1 100%;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    text-shadow: none;
+  }
+}

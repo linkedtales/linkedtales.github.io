@@ -1,0 +1,30 @@
+@import "src/layout.scss";
+
+.rankingmini {
+  &__title {
+    padding: $space;
+    margin-bottom: $space;
+    text-align: center;
+  }
+
+  &__ranking {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 1 0 50%;
+      text-align: center;
+      padding-bottom: $space;
+      font-weight: bold;
+      font-size: 120%;
+      
+      img {
+        margin-bottom: $space;
+        border-radius: 50%;
+        height: 3rem;
+      }
+    }
+  }
+
+  
+}

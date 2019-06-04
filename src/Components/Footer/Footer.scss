@@ -1,0 +1,22 @@
+@import "src/layout.scss";
+
+.footer {
+  text-align: center;
+  padding: $space;
+  padding-bottom: $space * 2;
+
+  img {
+    max-width: 50%;
+  }
+
+  .widget, a {
+    span {
+      text-shadow: none !important;
+    }
+  }
+
+  a {
+    color: white;
+    cursor: pointer;
+  }
+}

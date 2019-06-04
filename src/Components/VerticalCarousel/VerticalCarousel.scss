@@ -1,0 +1,37 @@
+@import "src/layout.scss";
+
+.vertical-carousel {
+  perspective: 1px;
+  
+
+  &__parallax {
+    background-position: center -100px;
+    justify-content: space-around;
+    flex-direction: column;
+    color: black;
+    display: flex;
+    transition: 0s linear;
+    transition-property: background-position;
+
+    &__item {
+      flex: 0 0 20%;
+      text-align: center;
+      background-color: rgba(245, 245, 245, 0.7);
+      text-shadow: 2px 2px white;
+      margin-bottom: $space;
+      padding: $space;
+
+      &:first-child {
+        margin-top: $space;
+      }
+    }
+  }
+
+  .title {
+    color:black;
+    text-shadow: 2px 2px white;
+  }
+  img {
+    height: 3rem;
+  }
+}

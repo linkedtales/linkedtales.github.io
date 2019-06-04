@@ -1,0 +1,45 @@
+@import "src/layout.scss";
+
+.index {
+  &__header {
+    &__logo {
+      padding: $space;
+      padding-bottom: 0;
+      text-align: center;
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  &__body{
+    padding: 0 $space;
+    display: flex;
+    align-items: center;
+
+    &__image{
+     flex:1 1 auto; 
+     height: 3rem;
+     padding: $space;
+
+     background-color: rgba(255, 255, 255, 0.2);
+     border-radius: 50%;
+
+     img {
+       height: 100%;
+     }
+    }
+
+    &__text{
+      flex:2 1 auto; 
+      padding: $space;
+
+      font-size: 90%;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    padding: $space;
+  }
+}

@@ -1,0 +1,68 @@
+@import "src/layout.scss";
+
+.ranking {
+  &__title {
+    display: flex;
+    padding: $space;
+
+    &__text{
+      flex: 1 1 auto;
+      margin-right: $space;
+    }    
+
+    &__image{
+      flex: 0 0 5rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      padding: $space;
+      text-align: center;
+      height: 4rem;
+     
+      img{
+        margin: -0.5rem;
+        width: 100%;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+
+    &__table {
+      flex: 1 0 50%;
+  
+      &__item, &__title {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        padding: $space;
+        text-align: center;
+        
+        
+        &__arrowimage {
+          height: 1rem;
+          width: 1.5rem;
+          margin-right: $space;
+          font-size: 120%;
+          font-weight: bold;
+        }
+
+        &__image {
+          border-radius: 50%;
+          height: 3rem;
+          margin: 0 $space;
+        }
+
+        &__numeral {
+          font-size: 80%;
+        }
+
+        &__number {
+          font-weight: bold;
+          font-size: 120%;
+        }
+      }
+    }
+  }
+}

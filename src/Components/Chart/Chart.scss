@@ -1,0 +1,15 @@
+@import "src/layout.scss";
+
+.chart {
+  padding: $space;
+
+  &__title {
+    padding: $space;
+    margin-bottom: $space;
+  }
+
+  &__canvas {
+    height: 5rem;
+
+  }
+}

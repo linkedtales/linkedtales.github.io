@@ -1,0 +1,78 @@
+$color-0: #002336;
+$color-1: #005582;
+$color-2: #0077B5;
+$color-3: #F7EAB2;
+$color-4: rgb(245, 245, 245);
+$color-5: white;
+
+$space: 0.7rem;
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/Rubik-Regular.ttf");
+}
+
+body {
+  margin: 0 auto;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+
+  font-size: 1rem;
+  background-image:
+    linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px),
+    linear-gradient(rgb(230,230,230) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(230,230,230) 1px, transparent 1px);
+  background-size: 10px 10px, 10px 10px;
+  background-position:-1px -1px, -1px -1px;    
+  line-height: 1.5;  
+
+  text-shadow: $color-0 1px 1px;
+}
+
+.border {
+  box-shadow: $color-0 1px 1px;
+
+}
+
+.title {
+  font-size: 150%;
+  text-shadow: 2px 3px $color-0;
+  font-weight: bold;
+}
+
+a {
+  color: white;
+}
+
+.alternative {
+  background-color: $color-4;
+  color: $color-0;
+  text-shadow: none;
+
+  .border {
+    box-shadow: none;
+    box-shadow: $color-0 1px 1px;
+  }
+
+  .title {
+    text-shadow: none;
+  }
+
+  a {
+    color: $color-1;
+  }  
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: $color-2;
+  display: flex;
+  flex-direction: column;
+  
+
+  @media (min-width: 800px) {
+    max-width: 50%;
+  }
+}
+
