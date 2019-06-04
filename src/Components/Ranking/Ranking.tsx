@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Ranking = ({ title, image, items, isAlternative = false } : Props) =>
-  <div className={`ranking${isAlternative && ' alternative'}`}>
+  <section className={`ranking${isAlternative && ' alternative'}`}>
     <div className="ranking__title title">
       <div className="ranking__title__text">
         { title }
@@ -30,7 +30,7 @@ const Ranking = ({ title, image, items, isAlternative = false } : Props) =>
                     (arrow === "-")
                       ? <span className="ranking__content__table__item__arrowimage">-</span>
                       : (arrow)
-                        ? <img src={`assets/${arrow}.png`} className="ranking__content__table__item__arrowimage"/> 
+                        ? <img src={`assets/${arrow}.png`} className="ranking__content__table__item__arrowimage" alt={`${arrow} arrow`}/> 
                         : <span className="ranking__content__table__item__numeral">#{j}</span>
                   }
                   <img className="ranking__content__table__item__image border" src={`assets/companies/${company}.png`} alt={company} />
@@ -44,6 +44,6 @@ const Ranking = ({ title, image, items, isAlternative = false } : Props) =>
         )
       }
     </div>
-  </div>
+  </section>
   
 export default Ranking;

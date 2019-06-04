@@ -39,10 +39,10 @@ class Chart extends React.Component<Props> {
 
   render() {
     return (
-      <div className={`chart ${this.props.isAlternative && ' alternative'}`} >
+      <section className={`chart ${this.props.isAlternative && ' alternative'}`} >
         <div className="chart__title title">{this.props.title}</div>
         <canvas className="chart__canvas" id={this.state.chartId.toString()} ref={this.chartReference}></canvas>
-      </div>
+      </section>
     );
   }
 }

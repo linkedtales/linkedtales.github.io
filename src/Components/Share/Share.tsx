@@ -20,7 +20,7 @@ const medias = [
 ]
 
 const Share = ({ isAlternative = false }) =>
-  <div className={`share ${isAlternative && 'alternative'}`}>
+  <section className={`share ${isAlternative && 'alternative'}`}>
     <div className="share share-text">
       help us do more, please share it!
     </div>
@@ -35,6 +35,6 @@ const Share = ({ isAlternative = false }) =>
         )
       }
     </ul>
-  </div>
+  </section>
 
 export default Share;

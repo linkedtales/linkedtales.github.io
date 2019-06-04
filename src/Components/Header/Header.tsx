@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Header : React.FC<Props>  = ({ title, subtitle } : Props) =>
-  <div className="header">
+  <section className="header">
     <div className="header__title title">
       Top Software Engineer
     </div>
@@ -32,7 +32,7 @@ const Header : React.FC<Props>  = ({ title, subtitle } : Props) =>
           </div>))
       }
     </div>
-    <div className="header__headline" dangerouslySetInnerHTML={{__html: subtitle }} />
-  </div>
+    <div className="header__headline alternative" dangerouslySetInnerHTML={{__html: subtitle }} />
+  </section>
   
 export default Header;

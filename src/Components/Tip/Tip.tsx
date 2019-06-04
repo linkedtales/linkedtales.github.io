@@ -4,7 +4,7 @@ import './Tip.scss';
 const Tip = ({ isAlternative = false, text = "" }) =>
   <div className={`tip ${isAlternative && 'alternative'}`}>
     <div className="tip__image">
-      <img src="/assets/light.png" />
+      <img src="/assets/light.png" alt="light" />
     </div>
     <div className="tip__text">
       {text}

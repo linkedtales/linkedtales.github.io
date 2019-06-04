@@ -123,7 +123,7 @@ const averageMonthsChart = {
     data: {
         labels: ["last", "2nd last", "3rd last", "4th last", "5th last"],
         datasets: [{
-            backgroundColor: 'rgba(255, 255, 255, 1)',
+            backgroundColor: '#002336',
             data: [30, 26, 21, 18, 18]
         }],
     },
@@ -135,9 +135,15 @@ const averageMonthsChart = {
       scales: {
           yAxes: [{
               ticks: {
-                  min: 0
+                  min: 0,
+                  fontColor: '#002336'
               }
-          }]
+          }],
+          xAxes: [{
+            ticks: {
+                fontColor: '#002336'
+            }
+        }]
       }
     }
   }
@@ -163,23 +169,30 @@ const highStayRankingMini = {
   ]
 }
 
+const share = {
+  url: 'https://linkedtales.github.io/software-engineering-experiences',
+  title: 'Top Companies Software Engineers Experiences',
+  description: 'Discover free insights about your career based on statistics from thousands of top company professionals worldwide.',
+  image: 'https://linkedtales.github.io/assets/experiences.png'
+}
+
 const App: React.FC = () =>
-  <div className="wrapper">
+  <main className="wrapper">
     <Helmet>
       <title>LinkedTales - Top Software Engineer Professional Experiences</title>
       <meta name="title" content="LinkedTales" />
       <meta name="description" content="Discover insights about your career based on statistics from thousands of top company professionals worldwide, it's totally free!" />
       <meta name="keywords" content="statistics, company, career, profession, infographic" />
     
-      <meta property="og:url" content="https://linkedtales.github.io/software-engineering-experiences" />
-      <meta property="og:title" content="Top Companies Software Engineers Experiences" />
-      <meta property="og:description" content="Discover free insights about your career based on statistics from thousands of top company professionals worldwide." />
-      <meta property="og:image" content="https://linkedtales.github.io/assets/experiences.png" />
+      <meta property="og:url" content={share.url} />
+      <meta property="og:title" content={share.title} />
+      <meta property="og:description" content={share.description} />
+      <meta property="og:image" content={share.image} />
 
-      <meta property="twitter:url" content="https://linkedtales.github.io/software-engineering-experiences" />
-      <meta property="twitter:title" content="Top Companies Software Engineers Experiences" />
-      <meta property="twitter:description" content="Discover free insights about your career based on statistics from thousands of top company professionals worldwide." />
-      <meta property="twitter:image" content="https://linkedtales.github.io/assets/experiences.png" />
+      <meta property="twitter:url" content={share.url} />
+      <meta property="twitter:title" content={share.title} />
+      <meta property="twitter:description" content={share.description} />
+      <meta property="twitter:image" content={share.image} />
     </Helmet>
     <Header title={title} subtitle={subtitle} />
     <VerticalCarousel items={items} background={"background.jpg"} />
@@ -196,7 +209,7 @@ const App: React.FC = () =>
     <Share  />
     <Footer isAlternative={true}  />
     
-  </div>
+  </main>
 
 
 export default App;

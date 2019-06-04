@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
-import './VerticalCarousel.scss';
+import React, { useEffect } from 'react'
+import 'chart.js'
+import './VerticalCarousel.scss'
 
 interface Props {
   items: any[];
@@ -22,7 +23,7 @@ const VerticalCarousel: React.FC<Props> = ({ items, background } : Props) => {
     }    
   })
 
-  return <div className="vertical-carousel">
+  return <section className="vertical-carousel">
     <div className="vertical-carousel__parallax" ref={parallaxRef} style={{backgroundImage: `url(assets/${background})`}}>
       {
         items.map(({ image, title, subtitle }, i) => (
@@ -34,7 +35,7 @@ const VerticalCarousel: React.FC<Props> = ({ items, background } : Props) => {
         ))
       }
     </div>
-  </div>
+  </section>
 }
 
 export default VerticalCarousel;

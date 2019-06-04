@@ -10,7 +10,7 @@
 
   &__subtitle{
     font-size: 140%;
-    text-shadow: 2px 2px $color-1;
+    text-shadow: 2px 2px $color-0;
     padding: $space;
   }
 
@@ -27,11 +27,10 @@
   }
 
   &__headline {
-    background-color: $color-4;
-    
+   
     padding: $space;
     font-size: 130%;
-    color: white;
+    
     text-shadow: 2px 2px $color-5;
   }
   
