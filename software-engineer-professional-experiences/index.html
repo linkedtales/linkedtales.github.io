@@ -102,7 +102,7 @@
           <div class="header__headline alternative">What do their jobs on the <strong>best companies</strong> show us?</div>
         </section>
         <section class="vertical-carousel">
-          <div class="vertical-carousel__parallax" style="background-image: url(&quot;assets/background.jpg&quot;); background-position-y: -600px;">
+          <div class="vertical-carousel__parallax" id="parallax" style="background-image: url('assets/background.jpg'); background-position-y: -600px;">
             <div class="vertical-carousel__parallax__item">
               <img src="/assets/calendar.png" alt="calendar">
               <div class="title">30 months</div>
@@ -386,6 +386,19 @@
 
       new Chart(document.getElementById("94669").getContext('2d'), averageYearsChart);
       new Chart(document.getElementById("57255").getContext('2d'), averageMonthsChart);
+
+
+      const e1 = document.getElementById("parallax");
+      const TOP_OFFSET = 600
+      const setBackgroundValue = (value) => {
+        if(e1)
+          e1.style.backgroundPositionY = value - TOP_OFFSET + "px"
+      }
+      setBackgroundValue(0)
+      document.onscroll = () => {
+        const scrollSize = window.scrollY;
+        setBackgroundValue(scrollSize)
+      }    
     </script>
   </body>
 </html>
