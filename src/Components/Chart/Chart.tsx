@@ -30,8 +30,13 @@ class Chart extends React.Component<Props> {
 
     //ar ctx = document.getElementById('chart1').getContext('2d');
     const chartDiv = this.chartReference.current;
+    if(this.props.isAlternative)
+    {
+      window.Chart.defaults.global.defaultFontColor = 'black';
+    } else {
+      window.Chart.defaults.global.defaultFontColor = 'white';
+    }
     
-    window.Chart.defaults.global.defaultFontColor = 'white';
     window.Chart.defaults.scale.gridLines.display = false;
 
     new window.Chart(chartDiv, chartOptions);

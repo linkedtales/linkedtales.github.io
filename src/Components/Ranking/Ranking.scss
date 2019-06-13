@@ -17,10 +17,13 @@
       padding: $space;
       text-align: center;
       height: 4rem;
+      width: 4rem;
      
       img{
         margin: -0.5rem;
-        width: 100%;
+        //width: 100%;
+        height: 5rem;
+        width: 5rem;
       }
     }
   }
@@ -61,6 +64,7 @@
         &__number {
           font-weight: bold;
           font-size: 120%;
+          width: 1.5rem;
         }
       }
     }

@@ -11,7 +11,7 @@ const VerticalCarousel: React.FC<Props> = ({ items, background } : Props) => {
   const parallaxRef = React.useRef<HTMLDivElement>(null)
   useEffect(() => {
     const e1 = parallaxRef.current;
-    const TOP_OFFSET = 600
+    const TOP_OFFSET = 0
     const setBackgroundValue = (value: number) => {
       if(e1)
         e1.style.backgroundPositionY = value - TOP_OFFSET + "px"

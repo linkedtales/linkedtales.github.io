@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Index from './Pages/Index/Index'
 import Experiences from './Pages/Experiences/Experiences'
+import Education from './Pages/Education/Education'
 
 import * as serviceWorker from './serviceWorker';
 
 const index = <Router>
     <Route path="/" exact component={Index} />
     <Route path="/software-engineer-professional-experiences" component={Experiences} />
+    <Route path="/software-engineer-education" component={Education} />
     
   </Router>
 

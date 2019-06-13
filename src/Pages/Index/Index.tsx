@@ -55,6 +55,9 @@ const Index: React.FC = () =>
           <li>
             <Link to="/software-engineer-professional-experiences">Professional Experiences</Link>
           </li>
+          <li>
+            <Link to="/software-engineer-education">Education</Link>
+          </li>
         </ul>
       </nav>
     </main>
