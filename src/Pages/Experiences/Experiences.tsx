@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+
+import SEO from '../../Components/SEO/SEO';
 
 import Chart from '../../Components/Chart/Chart';
 import Footer from '../../Components/Footer/Footer';
@@ -13,12 +14,12 @@ import VerticalCarousel from '../../Components/VerticalCarousel/VerticalCarousel
 import './Experiences.scss';
 
 const title = 'professional experiences'
-const subtitle = 'What do their jobs on the <strong>best companies</strong> show us?'
+const subtitle = 'What do their jobs in the <strong>best companies</strong> show us?'
 const items = [
   {
     image: "calendar",
     title: "30 months",
-    subtitle: "Is the average time on past experience,<br/>The average of all past experiences are <br/><strong>25 months</strong>."
+    subtitle: "Is the average time on experiences,<br/>The average of all past experiences are <br/><strong>25 months</strong>."
   },
   {
     image: "building",
@@ -33,7 +34,7 @@ const items = [
 ]
 
 const lowStayRanking = {
-  title: 'Companies where engineers doesn\'t stay for too long...',
+  title: 'Companies where engineers don\'t stay for too long...',
   items: [
     {
       title: "average months",
@@ -64,7 +65,7 @@ const averageYearsChartTip = 'Top-company engineers stay 50% more in the first 2
 const averageMonthsChartTip = 'Although engineers are known for not staying much longer in a company, they stay more and more at each new job.'
 
 const highStayRanking = {
-  title: 'Companies where engineers stays more',
+  title: 'Companies where engineers stay more',
   items: [
     {
       title: "average months",
@@ -160,7 +161,7 @@ const lowStayRankingMini = {
 }
 
 const highStayRankingMini = {
-  title: '% of top-company engineers which stayed more than 60 months',
+  title: '% of top-company engineers who stayed more than 60 months',
   items: [
     { company: 'netflix', number: '26' },
     { company: 'twitter', number: '23' },
@@ -173,27 +174,13 @@ const share = {
   url: 'https://linkedtales.github.io/software-engineering-experiences',
   title: 'Top Companies Software Engineers Experiences',
   description: 'Discover free insights about your career based on statistics from thousands of top company professionals worldwide.',
+  keywords: 'professionals, experiences',
   image: 'https://linkedtales.github.io/assets/experiences.png'
 }
 
 const App: React.FC = () =>
   <main className="wrapper">
-    <Helmet>
-      <title>LinkedTales - Top Software Engineer Professional Experiences</title>
-      <meta name="title" content="LinkedTales" />
-      <meta name="description" content="Discover insights about your career based on statistics from thousands of top company professionals worldwide, it's totally free!" />
-      <meta name="keywords" content="statistics, company, career, profession, infographic" />
-    
-      <meta property="og:url" content={share.url} />
-      <meta property="og:title" content={share.title} />
-      <meta property="og:description" content={share.description} />
-      <meta property="og:image" content={share.image} />
-
-      <meta property="twitter:url" content={share.url} />
-      <meta property="twitter:title" content={share.title} />
-      <meta property="twitter:description" content={share.description} />
-      <meta property="twitter:image" content={share.image} />
-    </Helmet>
+    <SEO share={share} />
     <Header title={title} subtitle={subtitle} />
     <VerticalCarousel items={items} background={"background.jpg"} />
     <Ranking {...lowStayRanking} image={"baby.png"}  />
@@ -206,7 +193,7 @@ const App: React.FC = () =>
     <Tip text={averageYearsChartTip}/>
     <Chart {...averageMonthsChart} isAlternative={true} />
     <Tip text={averageMonthsChartTip} isAlternative={true}/>
-    <Share  />
+    <Share share={share} />
     <Footer isAlternative={true}  />
     
   </main>

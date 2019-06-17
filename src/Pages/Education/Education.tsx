@@ -1,24 +1,23 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
+import SEO from '../../Components/SEO/SEO';
 import Chart from '../../Components/Chart/Chart';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import Share from '../../Components/Share/Share';
 import Ranking from '../../Components/Ranking/Ranking';
-import RankingMini from '../../Components/RankingMini/RankingMini';
 import Tip from '../../Components/Tip/Tip';
 import VerticalCarousel from '../../Components/VerticalCarousel/VerticalCarousel';
 
 import './Education.scss';
 
-const title = 'education'
+const title = 'Professional Education'
 const subtitle = 'What do education from <strong>best company</strong> employees show us?'
 const items = [
   {
     image: "education",
     title: "5 years",
-    subtitle: "Is the average average professional education time."
+    subtitle: "Is the average professional education time."
   },
   {
     image: "master",
@@ -33,7 +32,7 @@ const items = [
 ]
 
 const lowStayRanking = {
-  title: 'Companies with highest education average',
+  title: 'Companies with the highest education average',
   items: [
     {
       title: "average years",
@@ -58,13 +57,11 @@ const lowStayRanking = {
   ]
 }
 
-//const lowStayRankingTip = ''
-//const highStayRankingTip = 'The total average is inflated by engineers which stayed almost a decade on the company, removing them we have a better average.'
-const rankingTip = 'Excluding professionals with more than 10 years declared education may bring us a more realist average'
-const averageYearsChartTip = 'Non-top company professionals focus more on short duration courses and stays at most on 6 years compared to top companies professionals.'
+const rankingTip = 'Excluding professionals with more than 10 years declared education may bring us a more realistic average'
+const averageYearsChartTip = 'Non-top company professionals focus more on short duration courses and stay at most on 6 years compared to top companies professionals.'
 
 const highStayRanking = {
-  title: 'Companies with lowest education average',
+  title: 'Companies with the lowest education average',
   items: [
     {
       title: "average months",
@@ -90,7 +87,7 @@ const highStayRanking = {
 }
 
 const averageYearsChart =  {
-  title: 'Average years education distribution',
+  title: 'Average years of the education distribution',
   chartOptions: {
     type: 'line',
     data: {
@@ -144,27 +141,14 @@ const share = {
   url: 'https://linkedtales.github.io/software-engineering-experiences',
   title: 'Top Companies Software Engineers Education',
   description: 'Discover free insights about your career based on statistics from thousands of top company professionals worldwide.',
+  keywords: 'professionals, experiences',
   image: 'https://linkedtales.github.io/assets/experiences.png'
 }
 
 const App: React.FC = () =>
   <main className="wrapper">
-    <Helmet>
-      <title>LinkedTales - Top Software Engineer Professional Education</title>
-      <meta name="title" content="LinkedTales" />
-      <meta name="description" content="Discover insights about your career based on statistics from thousands of top company professionals worldwide, it's totally free!" />
-      <meta name="keywords" content="statistics, company, career, profession, infographic" />
-    
-      <meta property="og:url" content={share.url} />
-      <meta property="og:title" content={share.title} />
-      <meta property="og:description" content={share.description} />
-      <meta property="og:image" content={share.image} />
+    <SEO share={share} />
 
-      <meta property="twitter:url" content={share.url} />
-      <meta property="twitter:title" content={share.title} />
-      <meta property="twitter:description" content={share.description} />
-      <meta property="twitter:image" content={share.image} />
-    </Helmet>
     <Header title={title} subtitle={subtitle} />
     <VerticalCarousel items={items} background={"background-education.jpg"} />
     <Ranking {...lowStayRanking} image={"teacher.png"}  />
@@ -175,7 +159,7 @@ const App: React.FC = () =>
     <Tip text={averageYearsChartTip}/>
     <Chart {...averageMonthsChart} isAlternative={true} />
 
-    <Share  />
+    <Share share={share} />
     <Footer isAlternative={true}  />
     
   </main>
